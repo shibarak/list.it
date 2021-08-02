@@ -99,7 +99,7 @@ class User(db.Model, UserMixin):
             return NotImplemented
         return not equal
 
-db.create_all()
+#db.create_all()
 
 #  Makes the "current_year" variable available in every template#
 @app.context_processor
