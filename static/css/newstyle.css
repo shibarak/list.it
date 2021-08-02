@@ -1,0 +1,527 @@
+/*! font-family: 'Josefin Sans', sans-serif;
+ font-family: 'Roboto', sans-serif;
+ */
+ html, body {
+     margin:0;
+     padding:0;
+}
+ body {
+     font-size: 20px;
+     color: #212529;
+     font-family: 'Roboto', sans-serif;
+}
+ p {
+     line-height: 1.5;
+     margin: 30px 0;
+}
+ h1, h2, h3, h4, h5, h6 {
+     font-weight: 300;
+}
+ #mainNav {
+     font-family: 'Josefin Sans', sans-serif;
+}
+ #mainNav .navbar-brand {
+     font-size: 20px;
+     font-weight: 700;
+     color: #03C4A1;
+     letter-spacing: 2px;
+     margin-left: 5px;
+     padding: 0;
+}
+ #mainNav .navbar-toggler {
+     padding: 0;
+     color: white;
+     margin-right: 8px;
+}
+ #mainNav .navbar-toggler-icon {
+     color: white;
+}
+ #mainNav .nav-item {
+     font-size: 15px;
+     font-weight: 400;
+     padding-top: 2px;
+     padding-bottom: 2px;
+}
+ #listDisplay {
+     color: white;
+     position: relative;
+     background: rgb(105,48,195);
+     background: rgb(21,4,133);
+     background: linear-gradient(0deg, rgba(21,4,133,1) 33%, rgba(89,9,149,1) 83%);
+     padding: 15px 20px;
+}
+ #listDisplay form{
+     margin-bottom:0;
+     padding-left: 15px;
+}
+ @media only screen and (min-width: 651px){
+     #listDisplay input{
+         width: 300px;
+    }
+}
+ #listDisplay h2 {
+     margin-bottom:0;
+}
+ #listName i {
+     margin-left: 5px;
+     margin-bottom: 5px;
+}
+ @media only screen and (min-width: 770px){
+     #listName .hide {
+         visibility: hidden;
+         display: inline-block;
+    }
+     #listName:hover .hide {
+         visibility:visible
+    }
+}
+ #newItem {
+     padding-top: 10px;
+     position: relative;
+     padding: 5px 20px;
+     background-color: rgba(3,196,161,0.60);
+}
+ #newItem a.disabled {
+     pointer-events: none;
+     cursor: default;
+}
+ #newItem input {
+     border-top-style: hidden;
+     border-right-style: hidden;
+     border-left-style: hidden;
+     border-bottom-style: hidden;
+     background-color: transparent;
+     width: 100%
+}
+ @media only screen and (min-width: 651px){
+     #newItem input{
+         font-size: 40px;
+    }
+}
+ #newItem form{
+     padding-left: 10px;
+     margin: 0;
+}
+ #listItems {
+     margin-bottom: 80px;
+}
+ #listItems a, a:hover, a:focus, a:active {
+     text-decoration: none;
+     color: inherit;
+}
+ #listItems i {
+     vertical-align: middle;
+}
+ .list-group-item {
+     padding: .75rem 2.5rem;
+}
+ #listItems form{
+     margin: 0;
+}
+ .item-name {
+     display: inline;
+}
+ #listItems label {
+     padding-left: 5px;
+}
+ #listItems input {
+     border-top-style: hidden;
+     border-right-style: hidden;
+     border-left-style: hidden;
+     border-bottom-style: hidden;
+     background-color: white;
+     font-size: 1em;
+     color: #C62A88;
+     background-color: transparent;
+}
+ .save-btn {
+     display: inline-block;
+     padding-top: 0;
+     padding-bottom: 0;
+}
+ .mini-btn {
+     padding: 2px;
+     border-radius: 5px;
+     color: #C62A88;
+     background: transparent;
+     border-color: #C62A88;
+     border-width: 2px;
+     margin-left: 6px;
+}
+ .name-date {
+     margin-left: 15px;
+}
+ .name-date p {
+     display: inline-block;
+     margin-top: 0px;
+     margin-bottom: 0px;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     max-width: 35ch;
+     vertical-align: middle;
+}
+ .date-border{
+     display: inline-block;
+     border-radius: 20px;
+     background-color: rgba(3,196,161,0.60);
+     color: #666666;
+     padding: 0 6px;
+     font-size: .7em;
+}
+ .change-check {
+     color: #03C4A1;
+}
+ .change-check > .far + .fas, .change-check:hover > .far {
+     display: none;
+}
+ .change-check:hover > .far + .fas {
+     display: inherit;
+}
+ .completed {
+     color: #bfbfbf;
+}
+ .completed input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+     color: #bfbfbf;
+     opacity: 1;
+    /* Firefox */
+}
+ .completed .name-date {
+     text-decoration: line-through;
+}
+ .item-align {
+     display: flex;
+     justify-content: space-between;
+}
+ .gstar {
+     color: #ababab;
+}
+ .gstar:hover {
+     color: #ffd000;
+}
+ .mobile {
+     margin-top: 5px;
+}
+ .star {
+     display: inline-block;
+     vertical-align: middle;
+     margin-top: 5px;
+     margin-right: 20px;
+     color: #ffd000;
+}
+ .star-bar {
+     font-size: .7em;
+     margin-right: -6px;
+     margin-top: -3px;
+}
+ .star-bar .fa-star {
+     color: #03C4A1;
+}
+ .delete-mark:hover {
+     color: #C62A88
+}
+ .date-form .hide-btn {
+     visibility: hidden;
+}
+ .date-form:hover .hide-btn {
+     visibility: visible;
+}
+ .hide-marks {
+     visibility: hidden;
+}
+ .date-form:hover .hide-marks {
+     visibility: visible;
+}
+ .date-form .list-group-item {
+     border-style: solid none;
+     border-color: #f0f0f0;
+     border-width: 2px;
+}
+ .date-form:hover .list-group-item {
+     border-style: solid none;
+     border-color: #b3b3b3;
+     border-width: 2px;
+}
+ .delete-mark-completed {
+     color:#bfbfbf;
+     display: inline-block;
+     vertical-align: middle;
+     margin-top: 12px;
+     margin-right: 20px;
+}
+ .no_border:focus{
+     outline: none;
+}
+/*! styles for user.html */
+ .u-page {
+     background: rgb(21,4,133);
+     background: linear-gradient(0deg, rgba(21,4,133,1) 27%, rgba(89,9,149,1) 62%, rgba(198,42,136,1) 100%);
+}
+ .user-card {
+     text-align: center;
+}
+ .user-card i {
+     padding: 50px 50px 0 50px;
+}
+ #userName {
+     font-family: 'Josefin Sans', sans-serif;
+     font-weight: 400;
+     padding: 20px 0 20px 0;
+}
+ .u-page .pill {
+     background-color: transparent;
+     border-width: 2px;
+     border: solid;
+     border-color: #C62A88;
+     color: #C62A88;
+     border-radius: 25px;
+     display: flex;
+     justify-content: space-between;
+     margin: 10px;
+}
+ .u-page .pill:hover {
+     background: linear-gradient(0deg, rgba(198,42,136,1) 24%, rgba(168,36,116,1) 57%);
+     color: white;
+}
+ .u-page .del-list:hover {
+     color: #150485;
+}
+ .u-page .pill a {
+     font-size: 1em;
+     padding: 7px;
+     color: inherit;
+}
+ .u-page .pill a, a:hover, a:focus, a:active {
+     text-decoration: none;
+}
+ .del-list i {
+     padding-top: 5px;
+}
+ .del-list:hover {
+     color:red;
+}
+ .login {
+     margin-top: 100px;
+}
+ .login label, h2 {
+     color: #03C4A1;
+}
+ .login h2 {
+     text-align: center;
+     margin: 20px 0;
+}
+ .register {
+     margin: 100px 0;
+}
+ .register label {
+     color: #03C4A1;
+}
+ .register .help-block {
+     color: #ed1f9b;
+}
+ footer {
+     padding: 50px 0 65px;
+}
+ footer .list-inline {
+     margin: 0;
+     padding: 0;
+}
+ footer .copyright {
+     font-size: 14px;
+     margin-bottom: 0;
+     text-align: center;
+}
+
+ .btn-primary {
+     color: #C62A88;
+     background: transparent;
+     border-color: #C62A88;
+     border-radius: 20px;
+}
+ .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+     color: white;
+     background: linear-gradient(0deg, rgba(198,42,136,1) 24%, rgba(168,36,116,1) 57%);
+     border-color: #C62A88;
+}
+ .btn-primary.disabled, .btn-primary:disabled {
+     color: white;
+     background-color: #914d76;
+     border-color: #C62A88;
+}
+ .btn-lg {
+     font-size: 16px;
+     padding: 25px 35px;
+}
+ #page-container {
+     position: relative;
+     min-height: 100vh;
+}
+ #content-wrap {
+     padding-bottom: 2.5rem;
+    /* Footer height */
+}
+ #footer {
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     height: 2.5rem;
+    /* Footer height */
+}
+ @media only screen and (min-width: 651px){
+     .check{
+         font-size: 2em;
+    }
+     .name-date{
+         font-size: 1em;
+    }
+     .name-date label, input:{
+         font-size: 1em
+    }
+     #listItems input {
+         width: 90px;
+    }
+     .mobile {
+         display: none;
+    }
+     .desktop {
+         display: inline;
+    }
+     .list-save {
+         display: inline-block;
+    }
+     .list-save-sm {
+         display: none;
+    }
+     .user-card {
+         font-size: 10em;
+         color: #03C4A1;
+    }
+
+     .delete-mark {
+         display: inline-block;
+         vertical-align: middle;
+         color: #ababab;
+         margin-top: 6px;
+         margin-right: 20px;
+    }
+}
+ @media only screen and (max-width: 650px) {
+     #listDisplay input{
+         width: 90%;
+    }
+     h2 {
+         font-size: 20px;
+    }
+     .hide-marks {
+         display: none;
+    }
+     #newItem input{
+         font-size: 25px;
+    }
+     .check{
+         font-size: 1.5em;
+    }
+     .name-date{
+         font-size: .7em;
+    }
+     .name-date label, input:{
+         font-size: .7em;
+         text-align: center;
+    }
+     #listItems input {
+         width: 75px;
+         font-size: .85em;
+         text-align: center;
+    }
+     .mobile {
+         display:inline-block;
+         width: 100%;
+         margin-left: 10px;
+    }
+     .mobile p {
+         display: inline;
+         font-size: .8em;
+    }
+     .mobile i{
+         display: inline;
+    }
+     .name-date {
+         display: none;
+    }
+     .completed .name-date {
+         display: inline-block;
+         margin-left: 5px;
+         font-size: .8em;
+    }
+     .desktop {
+         display: none;
+    }
+}
+ @media only screen and (max-width: 650px) {
+     .delete-mark-completed {
+         margin-top: 7px;
+         margin-right: -1px;
+    }
+     .mobile p {
+         display: inline-block;
+         margin-top: 0px;
+         margin-bottom: 0px;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         overflow: hidden;
+         max-width: 20ch;
+         vertical-align: middle;
+    }
+     .ia-collapse {
+         margin-top: 7px;
+    }
+     .date-border {
+         height: 20px;
+         margin-top: 5px;
+    }
+     .save-btn {
+         height: 21px;
+         padding: 0 4px;
+         margin-top: 3px;
+    }
+     .star {
+         display: inline-block;
+         vertical-align: middle;
+         margin: 0;
+    }
+     .delete-mark {
+         display: inline-block;
+         vertical-align: middle;
+         margin-top: 2px;
+         margin-left: 20px;
+         color: #ababab;
+    }
+     .list-save {
+         display: none;
+    }
+     .list-save-sm {
+         display: inline-block;
+         border-radius: 5px;
+         margin-left: 5px;
+         padding: 6px 8px;
+    }
+     .user-card {
+         font-size: 7em;
+         color: #03C4A1;
+    }
+     .pill {
+         font-size: .7em;
+     }
+     .pill .lname {
+         display: inline-block;
+         margin-top: 0px;
+         margin-bottom: 0px;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         overflow: hidden;
+         max-width: 26ch;
+         vertical-align: middle;
+     }
+
+    }

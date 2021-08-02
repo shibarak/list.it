@@ -1,0 +1,1 @@
+SECRET_KEY = "lkjsw874y34hrnoty8x7rtb"
