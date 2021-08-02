@@ -16,10 +16,10 @@ app.config['SECRET_KEY'] = config.SECRET_KEY
 Bootstrap(app)
 
 # ---------------------- setup SQL databases ----------------------#
-if os.environ.get("DATABASE_URL") is None:
+if config.DATABASE_URL is None:
     app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///listit.db'
 else:
-    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
+    app.config["SQLALCHEMY_DATABASE_URI"] = config.DATABASE_URL
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
