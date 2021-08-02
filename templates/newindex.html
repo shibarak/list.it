@@ -96,12 +96,15 @@
                         <div class="item-align ia-collapse">
                             <div>
                                 {% if not item.due_date %}
+                                <form action="{{ url_for('new_date', id=item.id, url_key=list.url_key) }}" class="date-form" method="post"
+                                autocomplete="off">
                                 <div class="date-border">
                                     <input class="no_border" id="dueDate{{ item.id }}" name="due_date"
                                            placeholder="No due date" type="text"/>
                                 </div>
                                     <button class="btn btn-primary btn-sm save-btn"
                                             type="submit">Save</button>
+                                </form>
                                     {% else: %}
                                 <div class="date-border">{{ item.due_date }}</div>
                                     {% endif %}
