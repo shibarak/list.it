@@ -13,7 +13,11 @@ import re
 
 # ------------- Setup Flask app -----------------------------#
 app = Flask(__name__)
-app.config['SECRET_KEY'] = config.SECRET_KEY
+if not config.SECRET_KEY:
+    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+else:
+    app.config['SECRET_KEY'] = config.SECRET_KEY
+
 Bootstrap(app)
 
 # ---------------------- setup SQL databases ----------------------#
