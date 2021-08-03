@@ -131,29 +131,20 @@
      border-bottom-style: hidden;
      background-color: white;
      font-size: 1em;
-     color: #C62A88;
+     color: transparent;
      background-color: transparent;
+     width: 100px;
+     margin-top: 1px;
+     z-index: 1;
 }
- .save-btn {
-     display: inline-block;
-     padding-top: 0;
-     padding-bottom: 0;
-}
- .mini-btn {
-     padding: 2px;
-     border-radius: 5px;
-     color: #C62A88;
-     background: transparent;
-     border-color: #C62A88;
-     border-width: 2px;
-     margin-left: 6px;
-}
+
  .name-date {
      margin-left: 15px;
+     display: inline;
 }
  .name-date p {
      display: inline-block;
-     margin-top: 0px;
+     margin-top: 2px;
      margin-bottom: 0px;
      white-space: nowrap;
      text-overflow: ellipsis;
@@ -162,13 +153,24 @@
      vertical-align: middle;
 }
  .date-border{
-     display: inline-block;
+     display: inline;
      border-radius: 20px;
-     background-color: rgba(3,196,161,0.60);
+     background-color: #73d1c0;
      color: #666666;
-     padding: 0 6px;
+     padding: 5px 6px;
      font-size: .7em;
+     height: 25px
 }
+
+.date-border p {
+
+    position: absolute;
+    background-color: #73d1c0;
+    z-index: 2;
+    margin-top: 10px;
+
+}
+
  .change-check {
      color: #03C4A1;
 }
@@ -378,9 +380,7 @@
      .name-date label, input:{
          font-size: 1em
     }
-     #listItems input {
-         width: 90px;
-    }
+
      .mobile {
          display: none;
     }
@@ -425,24 +425,13 @@
      .name-date{
          font-size: .7em;
     }
-     .name-date label, input:{
-         font-size: .7em;
-         text-align: center;
-    }
-     #listItems input {
-         width: 75px;
-         font-size: .85em;
-         text-align: center;
-    }
+
      .mobile {
          display:inline-block;
          width: 100%;
          margin-left: 10px;
     }
-     .mobile p {
-         display: inline;
-         font-size: .8em;
-    }
+
      .mobile i{
          display: inline;
     }
@@ -463,7 +452,7 @@
          margin-top: 7px;
          margin-right: -1px;
     }
-     .mobile p {
+     .mobile .item-mobile {
          display: inline-block;
          margin-top: 0px;
          margin-bottom: 0px;
@@ -472,19 +461,38 @@
          overflow: hidden;
          max-width: 20ch;
          vertical-align: middle;
+         font-size: .8em;
     }
      .ia-collapse {
          margin-top: 7px;
     }
+
+     .db-container {
+
+     margin-top: 4px;
+
+     }
      .date-border {
-         height: 20px;
-         margin-top: 5px;
+        height: 25px;
+         margin-top: 4px;
+         position: relative;
+
     }
-     .save-btn {
-         height: 21px;
-         padding: 0 4px;
-         margin-top: 3px;
+
+    .date-border p {
+        margin-top: 1px;
+        margin-left: 6px;
+
     }
+     .fa-calendar {
+        position: absolute;
+        right: 11px;
+        top:4.8px;
+        font-size: 1.1em;
+        color: black;
+        z-index: 0;
+
+     }
      .star {
          display: inline-block;
          vertical-align: middle;

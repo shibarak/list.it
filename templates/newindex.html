@@ -63,16 +63,20 @@
                             </span>
                     </a>
                     <span class="name-date"> <!-- enter a due date for item -->
-                        <p class="item-name">{{ item.name }}</p>                                {% if not item.due_date %}
+                        <p class="item-name">{{ item.name }}</p>
+                        {% if not item.due_date %}
                             <div class="date-border">
+                                <p>No due date</p>
                                 <input class="no_border" id="dueDate{{ item.id }}" name="due_date"
-                                       placeholder="No due date " type="text"/>
+                                       placeholder="No due date" type="date" onchange="this.form.submit()"/>
                             </div>
-                                <button class="btn btn-primary btn-sm hide-btn save-btn"
-                                        type="submit">Save Date</button>
 
                                 {% else: %}
-                            <div class="date-border">{{ item.due_date }}</div>
+                            <div class="date-border">
+                                <p>{{ item.due_date }}</p>
+                                <input class="no_border" id="dueDate{{ item.id }}" name="due_date"
+                                       placeholder="No due date" type="date" onchange="this.form.submit()"/>
+                            </div>
                                 {% endif %}
                         </span>
                 </div>
@@ -82,7 +86,7 @@
                     <div data-toggle="collapse" data-target="#collapseMarks{{ item.id }}"
                             aria-expanded="false" aria-controls="collapseMarks{{ item.id }}">
                         <div class="item-align">
-                            <p>{{ item.name }}</p>
+                            <p class="item-mobile">{{ item.name }}</p>
                             <div align="right">
                                 <span class="fa-stack star-bar">
                                     <i class="far fa-square fa-stack-2x"></i>
@@ -95,16 +99,22 @@
                     <div class="collapse" id="collapseMarks{{ item.id }}">
                         <div class="item-align ia-collapse">
                             <div>
-                                {% if not item.due_date %}
-                                    <div class="date-border">
-                                        <input class="no_border" id="dueDate{{ item.id }}" name="due_date_mobile"
-                                               placeholder="No due date" type="text"/>
-                                    </div>
-                                        <button class="btn btn-primary btn-sm save-btn"
-                                                type="submit">Save</button>
-                                    {% else: %}
-                                <div class="date-border">{{ item.due_date }}</div>
-                                    {% endif %}
+                             {% if not item.due_date %}
+                            <div class="date-border">
+                                <p>No due date</p>
+                                <input class="no_border" id="dueDate{{ item.id }}" name="due_date_mobile"
+                                       placeholder="No due date" type="date" onblur="this.form.submit()"/>
+                                <i class="far fa-calendar"></i>
+                            </div>
+
+                                {% else: %}
+                            <div class="date-border">
+                                <p>{{ item.due_date }}</p>
+                                <input class="no_border" id="dueDate{{ item.id }}" name="due_date_mobile"
+                                       placeholder="No due date" type="date" onblur="this.form.submit()"/>
+                                <i class="far fa-calendar"></i>
+                            </div>
+                                {% endif %}
                             </div>
                             <div>
                                 <div class="star"> <!-- display star and delete-->
@@ -157,26 +167,30 @@
                             <i class="fas fa-check-square check"></i>
                             </span>
                     </a>
-                    <span class="name-date">
+                    <div class="name-date">
                         <p class="item-name">{{ item.name }}</p>
                                 {% if not item.due_date %}
                             <div class="date-border">
+                                <p>No due date</p>
                                 <input class="no_border" id="dueDate{{ item.id }}" name="due_date"
-                                       placeholder="No due date" type="text"/>
+                                       placeholder="No due date" type="date" onchange="this.form.submit()"/>
                             </div>
-                                <button class="btn btn-primary btn-sm hide-btn save-btn"
-                                        type="submit">Save Date</button>
+
                                 {% else: %}
-                            <div class="date-border">{{ item.due_date }}</div>
+                            <div class="date-border">
+                                <p>{{ item.due_date }}</p>
+                                <input class="no_border" id="dueDate{{ item.id }}" name="due_date"
+                                       placeholder="No due date" type="date" onchange="this.form.submit()"/>
+                            </div>
                                 {% endif %}
-                        </span>
+                        </div>
                 </div>
 <!-- dropdown for mobile ----------------------------->
                 <div class="mobile">
                     <div data-toggle="collapse" data-target="#collapseMarks{{ item.id }}"
                             aria-expanded="false" aria-controls="collapseMarks{{ item.id }}">
                         <div class="item-align">
-                            <p>{{ item.name }}</p>
+                            <p class="item-mobile">{{ item.name }}</p>
                             <div align="right">
                             <i class="fas fa-bars" style="font-size: 1.3em;"></i>
                             </div>
@@ -184,18 +198,23 @@
                     </div>
                     <div class="collapse" id="collapseMarks{{ item.id }}">
                         <div class="item-align ia-collapse">
-                            <div>
-                                {% if not item.due_date %}
-                                <div class="date-border">
-                                    <input class="no_border" id="dueDate{{ item.id }}" name="due_date_mobile"
-                                           placeholder="No due date" type="text"/>
-                                </div>
-                                    <button class="btn btn-primary btn-sm save-btn" type="submit">
-                                        Save
-                                    </button>
-                                    {% else: %}
-                                <div class="date-border">{{ item.due_date }}</div>
-                                    {% endif %}
+                            <div class="db-container">
+                            {% if not item.due_date %}
+                            <div class="date-border">
+                                <p>No due date</p>
+                                <input class="no_border" id="dueDate{{ item.id }}" name="due_date_mobile"
+                                       placeholder="No due date" type="date" onblur="this.form.submit()"/>
+                                <i class="far fa-calendar"></i>
+                            </div>
+
+                                {% else: %}
+                            <div class="date-border">
+                                <p>{{ item.due_date }}</p>
+                                <input class="no_border" id="dueDate{{ item.id }}" name="due_date_mobile"
+                                       placeholder="No due date" type="date" onblur="this.form.submit()"/>
+                                <i class="far fa-calendar"></i>
+                            </div>
+                            {% endif %}
                             </div>
                             <div>
                                 <div class="star">

@@ -108,7 +108,8 @@ class User(db.Model, UserMixin):
 #  Makes the "current_year" variable available in every template#
 @app.context_processor
 def inject_now():
-    return {'current_year': datetime.date.today().strftime("%Y")}
+    return {'current_year': datetime.date.today().strftime("%Y"),
+            'current_date': datetime.date.today().strftime("%Y-%m-%d")}
 
 # loads the current_user
 @login_manager.user_loader

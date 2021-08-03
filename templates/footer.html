@@ -13,56 +13,6 @@
 <script src="{{ url_for('static', filename='js/onclick.js')}}"></script>
 <script src="{{ url_for('static', filename='js/bootstrap-datepicker.min.js')}}"></script>
 
-<script>
-    $(document).ready(function(){
-      var date_input=$('input[name="due_date"]');
-      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-      var options={
-        format: 'mm/dd/yy',
-        container: container,
-        todayHighlight: true,
-        autoclose: true,
-        onSelect : function (dateText, inst) {
-        $('#dateForm').submit(); // <-- SUBMIT LIKE THIS
-        },
-
-      };
-
-
-      date_input.datepicker(options);
-
-      $(function () {
-        $('[data-toggle="popover"]').popover()
-       })
-
-    })
-
-</script>
-<script>
-           $(document).ready(function(){
-      var date_input=$('input[name="due_date_mobile"]');
-      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-      var options={
-        format: 'mm/dd/yy',
-        container: container,
-        todayHighlight: true,
-        autoclose: true,
-        onSelect : function (dateText, inst) {
-        $('#dateForm').submit(); // <-- SUBMIT LIKE THIS
-        },
-
-      };
-
-
-      date_input.datepicker(options);
-
-      $(function () {
-        $('[data-toggle="popover"]').popover()
-       })
-
-    })
-
-</script>
 
 
 </body>
