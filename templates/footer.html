@@ -28,7 +28,18 @@
 
       };
 
-      $(document).ready(function(){
+
+      date_input.datepicker(options);
+
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+       })
+
+    })
+
+</script>
+<script>
+           $(document).ready(function(){
       var date_input=$('input[name="due_date_mobile"]');
       var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
       var options={
@@ -42,6 +53,7 @@
 
       };
 
+
       date_input.datepicker(options);
 
       $(function () {
@@ -51,7 +63,6 @@
     })
 
 </script>
-
 
 
 </body>
