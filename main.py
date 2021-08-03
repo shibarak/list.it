@@ -165,7 +165,10 @@ def new_item(url_key):
 @app.route("/date/<url_key>/<id>", methods=["POST"])
 def new_date(id, url_key):
     print(request.form)
-    due_date = request.form['due_date']
+    if request.form['due_date']:
+        due_date = request.form['due_date']
+    else:
+        due_date = request.form['due_date_mobile']
     item = ListItem.query.get(id)
     item.due_date = due_date
     db.session.commit()
