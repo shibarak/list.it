@@ -147,7 +147,7 @@
     {% if not item.complete and not item.star: %}
     <!--display un-starred items -->
 
-    <form action="{{ url_for('new_date', id=item.id, url_key=list.url_key) }}" class="date-form" method="post" autocomplete="off">
+    <form action="{{ url_for('new_date', id=item.id, url_key=list.url_key) }}" class="date-form" method="post" autocomplete="off" id="dateForm">
         <li class="list-group-item">
             <div class="item-align">
                 <div>
