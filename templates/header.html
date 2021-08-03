@@ -35,6 +35,17 @@
     <!-- Fontawesome Icon Kit -->
     <script src="https://kit.fontawesome.com/a43f00d6f8.js" crossorigin="anonymous"></script>
 
+    <script>
+        $('#mobileSave').on("click",function(event) {
+            // to prevent div collapse
+            event.stopPropagation();
+            console.log("AAA");
+        });
+        $('#dateForm').on('submit',function(event) {
+                console.log("submitted");
+        })
+    </script>
+
 
 </head>
 
