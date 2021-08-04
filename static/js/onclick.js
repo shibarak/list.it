@@ -11,7 +11,7 @@ $('body').on('click', '[data-editable]', function(){
 
   var $el = $(this);
 
-  var $input = $('<input name="lname"/>').val( $el.text() );
+  var $input = $('<input name="lname" maxlength="50"/>').val( $el.text() );
   $el.replaceWith( $input );
 
   var save = function(){
