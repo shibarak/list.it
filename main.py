@@ -168,8 +168,10 @@ def new_date(id, url_key):
     print(request.form)
     if request.form['due_date']:
         due_date = request.form['due_date']
-    else:
+    elif request.form['due_date_mobile']:
         due_date = request.form['due_date_mobile']
+    else:
+        due_date = request.form['due_date_tablet']
     item = ListItem.query.get(id)
     item.due_date = due_date
     db.session.commit()

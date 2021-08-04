@@ -62,23 +62,23 @@
                             <i class="fas fa-check-square check"></i>
                             </span>
                     </a>
-                    <span class="name-date"> <!-- enter a due date for item -->
+                    <div class="name-date"> <!-- enter a due date for item -->
                         <p class="item-name">{{ item.name }}</p>
-                        {% if not item.due_date %}
-                            <div class="date-border">
-                                <p>No due date</p>
-                                <input class="no_border" id="dueDate{{ item.id }}" name="due_date"
-                                       placeholder="No due date" type="date" onchange="this.form.submit()"/>
-                            </div>
-
-                                {% else: %}
-                            <div class="date-border">
-                                <p>{{ item.due_date }}</p>
-                                <input class="no_border" id="dueDate{{ item.id }}" name="due_date"
-                                       placeholder="No due date" type="date" onchange="this.form.submit()"/>
-                            </div>
-                                {% endif %}
-                        </span>
+                        <div class="date-border">
+                            {% if not item.due_date %}
+                            <p>No due date</p>
+                            {% else: %}
+                            <p>{{ item.due_date }}</p>
+                            {% endif %}
+                            <input class="no_border pc" id="dueDate{{ item.id }}" name="due_date"
+                                   type="date" onchange="this.form.submit()"/>
+                            <input class="no_border tablet" id="dueDate{{ item.id }}" name="due_date_tablet"
+                                   type="date" onblur="this.form.submit()"/>
+                            <span class="tablet-ico">
+                            <i class="far fa-calendar"></i>
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
          <!-- dropdown for mobile ----------------------------->
@@ -169,20 +169,20 @@
                     </a>
                     <div class="name-date">
                         <p class="item-name">{{ item.name }}</p>
-                                {% if not item.due_date %}
-                            <div class="date-border">
+                             <div class="date-border">
+                                {% if not item.due_date: %}
                                 <p>No due date</p>
-                                <input class="no_border" id="dueDate{{ item.id }}" name="due_date"
-                                       placeholder="No due date" type="date" onchange="this.form.submit()"/>
-                            </div>
-
                                 {% else: %}
-                            <div class="date-border">
                                 <p>{{ item.due_date }}</p>
-                                <input class="no_border" id="dueDate{{ item.id }}" name="due_date"
-                                       placeholder="No due date" type="date" onchange="this.form.submit()"/>
-                            </div>
                                 {% endif %}
+                                <input class="no_border pc" id="dueDate{{ item.id }}" name="due_date"
+                                       type="date" onchange="this.form.submit()"/>
+                                <input class="no_border tablet" id="dueDate{{ item.id }}" name="due_date_tablet"
+                                       type="date" onblur="this.form.submit()"/>
+                                <span class="tablet-ico">
+                                    <i class="far fa-calendar"></i>
+                                </span>
+                            </div>
                         </div>
                 </div>
 <!-- dropdown for mobile ----------------------------->

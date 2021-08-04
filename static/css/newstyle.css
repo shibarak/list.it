@@ -159,7 +159,8 @@
      color: #666666;
      padding: 5px 6px;
      font-size: .7em;
-     height: 25px
+     height: 25px;
+     position: relative;
 }
 
 .date-border p {
@@ -531,5 +532,40 @@
          max-width: 26ch;
          vertical-align: middle;
      }
+
+    }
+
+    @media (pointer: fine) {
+
+        .pc {
+            display: -webkit-inline-flex;
+        }
+        .tablet {
+            display: none;
+        }
+
+        .tablet-ico {
+            display: none;
+        }
+
+    }
+
+    @media (pointer: coarse) {
+
+        .pc {
+            display: none;
+        }
+        .tablet {
+            display: -webkit-inline-flex;
+        }
+
+        .tablet-ico {
+            display: block;
+            position: absolute;
+            top: 4px;
+            right: 11px;
+            font-size: 1.1em;
+            color: black;
+        }
 
     }
